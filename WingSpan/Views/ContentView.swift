@@ -1,21 +1,25 @@
 //
 //  ContentView.swift
-//  WingSpan
+//  ChallengeTwo
 //
-//  Created by Abdusamad Abdusattorov on 04/11/24.
+//  Created by Abdusamad Abdusattorov on 11/11/24.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        TabView {
+            Tab("Posts", systemImage: "bubble.left.and.text.bubble.right") {
+                PostsView()
+            }
+            Tab("Profile", systemImage: "person.fill") {
+//                ProfileView()
+            }
         }
-        .padding()
+        .foregroundStyle(
+            Color.greenDark
+        )
     }
 }
 

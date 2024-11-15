@@ -1,18 +1,17 @@
 //
 //  Post.swift
-//  WingSpan
+//  ChallengeTwo
 //
-//  Created by Abdusamad Abdusattorov on 15/11/24.
+//  Created by Abdusamad Abdusattorov on 13/11/24.
 //
 
-import SwiftUI
+import Foundation
 
-struct Post: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-#Preview {
-    Post()
+struct Post: Identifiable, Codable {
+    var id: String
+    var text: String
+    var type: String
+    var author: String
+    var received: Bool
+    var timestamp: String
 }
