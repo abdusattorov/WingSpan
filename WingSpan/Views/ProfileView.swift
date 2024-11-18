@@ -74,6 +74,7 @@ struct ProfileView: View {
                 .foregroundStyle(Color.black)
                 .cornerRadius(15)
                 .shadow(color: Color(hex: 0xb3b3b3), radius: 4, x: 0, y:4)
+                .padding([.leading, .trailing])
                 
                 //                Old picker by Samin
                 //                Picker("Options", selection: $selectedSegment){
@@ -90,7 +91,7 @@ struct ProfileView: View {
                     Text("Replies").tag(2)
                 }
                 .pickerStyle(.segmented)
-                .padding([.top, .bottom])
+                .padding()
                 
                 switch selection {
                 case 0:
@@ -114,7 +115,7 @@ struct ProfileView: View {
                 
             }
             .navigationTitle("My Posts")
-            .padding([.leading, .trailing], 16)
+//            .padding([.leading, .trailing], 16)
         }
     }
 }

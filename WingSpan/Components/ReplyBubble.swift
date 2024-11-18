@@ -64,8 +64,10 @@ struct ReplyBubble: View {
         }
         .frame(maxWidth: .infinity)
         .padding(.bottom, 10)
+        .padding([.leading, .trailing], 16)
         
     }
+    
 }
 
 #Preview {
