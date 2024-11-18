@@ -9,86 +9,112 @@ import SwiftUI
 
 struct ProfileView: View {
     @State private var selectedSegment = "Offers"
-    let segments = ["Offers", "Request" , "Replies"]
+    let segments = ["Offers", "Request", "Replies"]
+    
+    @State var selection = 0
     
     var body: some View {
-        VStack{
-            Text("Profile")
-                .bold()
-                .font(.title)
-                .padding(.trailing,270)
-            
-            Divider()
-                .padding()
-            ZStack{
-              RoundedRectangle(cornerRadius: 15)
-                    .frame(width: 350,height: 80)
-                    .foregroundColor(Color(#colorLiteral(red: 0.9333332181, green: 0.9333333969, blue: 0.9376390576, alpha: 1)))
-                HStack{
-                    Image(systemName: "person")
-                        .resizable()
-                        .frame(width: 25, height: 25)
-                        .foregroundColor(Color(#colorLiteral(red: 0.1291008592, green: 0.3538852334, blue: 0.3169427514, alpha: 1)))
-                    Text("Amelia Sinclair")
-                        .font(.headline)
+        NavigationStack {
+            VStack{
+                
+                /*
+                 HStack {
+                 Image(systemName: "person")
+                 .resizable()
+                 .frame(width: 25, height: 25)
+                 .foregroundStyle(Color.greenDark)
+                 .padding([.leading, .trailing], 6)
+                 Text("Teja Dungala")
+                 .bold()
+                 
+                 Spacer()
+                 
+                 Button {
+                 //                        showModal.toggle()
+                 } label: {
+                 Image(systemName: "pencil")
+                 .imageScale(.large)
+                 .foregroundColor(Color.greenDark)
+                 }
+                 .buttonStyle(.bordered)
+                 .buttonBorderShape(.roundedRectangle)
+                 .cornerRadius(50)
+                 }
+                 .padding()
+                 .background(Color(#colorLiteral(red: 0.9333332181, green: 0.9333333969, blue: 0.9376390576, alpha: 1)))
+                 .foregroundStyle(Color.black)
+                 .cornerRadius(15)
+                 .frame(width: 360)
+                 */
+                
+                HStack {
+                    Image(systemName: "person.fill")
+                        .imageScale(.large)
+                        .padding(8)
+                        .foregroundStyle(Color.greenDark)
+                    //                        .background(Color.greenLight)
+                        .cornerRadius(50)
+                    Text("Teja Dungala")
                         .bold()
-                        .padding(.trailing,50)
-                    Button(action:{
-                    }) {Image(systemName: "pencil.circle")
-                            .bold()
-                        .foregroundColor(Color(#colorLiteral(red: 0.1291008592, green: 0.3538852334, blue: 0.3169427514, alpha: 1)))
+                    Spacer()
+                    Button {
+                        //                        showModal.toggle()
+                    } label: {
+                        Image(systemName: "pencil")
+                            .imageScale(.large)
+                            .padding(8)
+                        //                            .background(Color.greenLight)
+                            .foregroundColor(Color.greenDark)
+                            .background(Color(#colorLiteral(red: 0.9333332181, green: 0.9333333969, blue: 0.9376390576, alpha: 1)))
+                            .cornerRadius(50)
                     }
-                    .padding(.leading,70)
                 }
-          }
-            Picker("Options",selection: $selectedSegment){
-                ForEach(segments,id: \.self){ segment in
-                Text(segment)
+                .padding()
+                .background(Color.white)
+                .foregroundStyle(Color.black)
+                .cornerRadius(15)
+                .frame(width: 360)
+                .shadow(color: Color(hex: 0xb3b3b3), radius: 4, x: 0, y:4)
+                
+                //                Old picker by Samin
+                //                Picker("Options", selection: $selectedSegment){
+                //                    ForEach(segments,id: \.self){ segment in
+                //                        Text(segment)
+                //                    }
+                //                }
+                //                .pickerStyle(SegmentedPickerStyle())
+                //                .padding()
+                
+                Picker(selection: $selection, label: Text("test")) {
+                    Text("Offers").tag(0)
+                    Text("Requests").tag(1)
+                    Text("Replies").tag(2)
+                }
+                .pickerStyle(.segmented)
+                .padding()
+                
+                switch selection {
+                case 0:
+                    MyOffersView()
+                case 1:
+                    MyRequestsView()
+                case 2:
+                    MyRepliesView()
+                default:
+                    MyOffersView()
+                }
+                
+                //                ZStack{
+                //                    RoundedRectangle(cornerRadius: 15)
+                //                        .frame(width: 360,height: 90)
+                //                        .foregroundColor(.white)
+                //                        .shadow(radius: 5)
+                //                    Text("I want to take you for a coffee")
+                //                        .padding(.trailing,80)
+                //                }
+                
             }
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
-            
-          /*  if selectedSegment == "Offers" {
-                            Text("Offers Content")
-                        } else if selectedSegment == "Requests" {
-                            Text("Requests Content")
-                        } else if selectedSegment == "Replies" {
-                            Text("Replies Content")
-                      } */
-                         
-            ZStack{
-                RoundedRectangle(cornerRadius: 15)
-                    .frame(width: 360,height: 90)
-                    .foregroundColor(.white)
-                    .shadow(radius: 5)
-                Text("I want to take you for a coffee")
-                    .padding(.trailing,80)
-            }
-            ZStack{
-                RoundedRectangle(cornerRadius: 15)
-                    .frame(width: 360,height: 90)
-                    .foregroundColor(.white)
-                    .shadow(radius: 5)
-                Text("Hey everyone! I brought some snacks to share, feel\n free to take one of them. They’re in the lab 2 ! ")
-                    .font(.subheadline)
-            }
-            ZStack{
-                RoundedRectangle(cornerRadius: 15)
-                    .frame(width: 360,height: 90)
-                    .foregroundColor(.white)
-                    .shadow(radius: 5)
-                Text("I can speak Spanish and english perfectly. ")
-            }
-            ZStack{
-                RoundedRectangle(cornerRadius: 15)
-                    .frame(width: 360,height: 90)
-                    .foregroundColor(.white)
-                    .shadow(radius: 5)
-                Text("Today I want to go eat sushi , but no one wants\n to come with me, if you want you can join me. ")
-                    .font(.subheadline)
-            }
-            
+            .navigationTitle("My Posts")
         }
     }
 }

@@ -15,15 +15,15 @@ struct PostsView: View {
             VStack {
                 
                 ScrollView {
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Zahra", received: false, timestamp: "1 hour ago"))
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Samin", received: false, timestamp: "1 hour ago"))
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Chiara", received: false, timestamp: "1 hour ago"))
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Marwa", received: false, timestamp: "1 hour ago"))
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Teja", received: false, timestamp: "1 hour ago"))
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Abdusamad", received: false, timestamp: "1 hour ago"))
+                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Zahra", received: false, timestamp: "1 hour ago"), showAuthor: true)
+                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Samin", received: false, timestamp: "1 hour ago"), showAuthor: true)
+                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Chiara", received: false, timestamp: "1 hour ago"), showAuthor: true)
+                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Marwa", received: false, timestamp: "1 hour ago"), showAuthor: true)
+                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Teja", received: false, timestamp: "1 hour ago"), showAuthor: true)
+                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
                 }
             }
-            .navigationTitle("Posts")
+            .navigationTitle("Wings")
             .searchable(text: $searchText)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {

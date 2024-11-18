@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Tab("Posts", systemImage: "bubble.left.and.text.bubble.right") {
+            Tab("Wings", systemImage: "bubble.left.and.text.bubble.right") {
                 PostsView()
             }
-            Tab("Profile", systemImage: "person.fill") {
+            Tab("My Posts", systemImage: "person.fill") {
                 ProfileView()
             }
         }

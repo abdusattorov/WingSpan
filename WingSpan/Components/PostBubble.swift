@@ -10,6 +10,7 @@ import SwiftUI
 struct PostBubble: View {
     
     var post: Post
+    var showAuthor: Bool
     
     var body: some View {
         VStack {
@@ -17,16 +18,20 @@ struct PostBubble: View {
                 
                 //                Name and request type
                 HStack {
-                    Text(post.author)
-                        .font(.system(size: 17, weight: .bold))
-                    Spacer()
-                    Text(post.type)
-                        .padding([.leading, .trailing], 20)
-                        .padding([.top, .bottom], 5)
-                        .font(.system(size: 15))
-                        .background(Color.grayLight)
-                        .foregroundStyle(Color.greenDark)
-                        .cornerRadius(30)
+                    
+                    if showAuthor == true {
+                        Text(post.author)
+                            .font(.system(size: 17, weight: .bold))
+                        
+                        Spacer()
+                        Text(post.type)
+                            .padding([.leading, .trailing], 20)
+                            .padding([.top, .bottom], 5)
+                            .font(.system(size: 15))
+                            .background(Color.grayLight)
+                            .foregroundStyle(Color.greenDark)
+                            .cornerRadius(30)
+                    }
                     
                 }
                 .frame(maxWidth: .infinity)
@@ -35,7 +40,8 @@ struct PostBubble: View {
                 //                Post text
                 Text(post.text)
                     .font(.system(size: 15))
-                    .padding([.leading, .trailing])
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding([.leading, .trailing], 20)
                 
                 //                Timestamp and reply count
                 HStack {
@@ -72,6 +78,6 @@ struct PostBubble: View {
 }
 
 #Preview {
-    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Abdusamad", received: false, timestamp: "1 hour ago"))
-    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Abdusamad", received: false, timestamp: "1 hour ago"))
+    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
+    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
 }

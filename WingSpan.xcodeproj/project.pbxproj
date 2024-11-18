@@ -15,6 +15,11 @@
 		077477892CE74BA900C29A89 /* PostBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077477882CE74BA900C29A89 /* PostBubble.swift */; };
 		0774778B2CE74BD700C29A89 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774778A2CE74BD700C29A89 /* Post.swift */; };
 		0774778F2CE74CFC00C29A89 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774778E2CE74CFC00C29A89 /* Extensions.swift */; };
+		0796348B2CEB4DC000E727E1 /* MyOffersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796348A2CEB4DC000E727E1 /* MyOffersView.swift */; };
+		0796348D2CEB4DC900E727E1 /* MyRequestsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796348C2CEB4DC900E727E1 /* MyRequestsView.swift */; };
+		0796348F2CEB4DD400E727E1 /* MyRepliesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0796348E2CEB4DD400E727E1 /* MyRepliesView.swift */; };
+		079634912CEB4EF200E727E1 /* ReplyBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079634902CEB4EF200E727E1 /* ReplyBubble.swift */; };
+		079634932CEB5BF200E727E1 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079634922CEB5BF200E727E1 /* Comment.swift */; };
 		25197FA92CEB3B970015D130 /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25197FA82CEB3B970015D130 /* AgreementView.swift */; };
 		25197FB82CEB3CE20015D130 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25197FB72CEB3CE20015D130 /* ProfileView.swift */; };
 		B8F9F4BA2CE7661400A6D2C3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9F4B92CE7661400A6D2C3 /* WelcomeView.swift */; };
@@ -30,6 +35,11 @@
 		077477882CE74BA900C29A89 /* PostBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostBubble.swift; sourceTree = "<group>"; };
 		0774778A2CE74BD700C29A89 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0774778E2CE74CFC00C29A89 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0796348A2CEB4DC000E727E1 /* MyOffersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyOffersView.swift; sourceTree = "<group>"; };
+		0796348C2CEB4DC900E727E1 /* MyRequestsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRequestsView.swift; sourceTree = "<group>"; };
+		0796348E2CEB4DD400E727E1 /* MyRepliesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRepliesView.swift; sourceTree = "<group>"; };
+		079634902CEB4EF200E727E1 /* ReplyBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplyBubble.swift; sourceTree = "<group>"; };
+		079634922CEB5BF200E727E1 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		25197FA82CEB3B970015D130 /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
 		25197FB72CEB3CE20015D130 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B8F9F4B92CE7661400A6D2C3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -66,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				077477882CE74BA900C29A89 /* PostBubble.swift */,
+				079634902CEB4EF200E727E1 /* ReplyBubble.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -74,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				0774778A2CE74BD700C29A89 /* Post.swift */,
+				079634922CEB5BF200E727E1 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,6 +113,9 @@
 				B8F9F4B92CE7661400A6D2C3 /* WelcomeView.swift */,
 				25197FA82CEB3B970015D130 /* AgreementView.swift */,
 				25197FB72CEB3CE20015D130 /* ProfileView.swift */,
+				0796348A2CEB4DC000E727E1 /* MyOffersView.swift */,
+				0796348C2CEB4DC900E727E1 /* MyRequestsView.swift */,
+				0796348E2CEB4DD400E727E1 /* MyRepliesView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -196,12 +211,17 @@
 				077477822CE74B4000C29A89 /* ContentView.swift in Sources */,
 				25197FB82CEB3CE20015D130 /* ProfileView.swift in Sources */,
 				25197FA92CEB3B970015D130 /* AgreementView.swift in Sources */,
+				079634932CEB5BF200E727E1 /* Comment.swift in Sources */,
 				0774778F2CE74CFC00C29A89 /* Extensions.swift in Sources */,
 				077477892CE74BA900C29A89 /* PostBubble.swift in Sources */,
 				077477832CE74B4000C29A89 /* WingSpanApp.swift in Sources */,
 				077477872CE74B8E00C29A89 /* PostsView.swift in Sources */,
+				0796348F2CEB4DD400E727E1 /* MyRepliesView.swift in Sources */,
 				0774778B2CE74BD700C29A89 /* Post.swift in Sources */,
+				079634912CEB4EF200E727E1 /* ReplyBubble.swift in Sources */,
+				0796348D2CEB4DC900E727E1 /* MyRequestsView.swift in Sources */,
 				B8F9F4BA2CE7661400A6D2C3 /* WelcomeView.swift in Sources */,
+				0796348B2CEB4DC000E727E1 /* MyOffersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
