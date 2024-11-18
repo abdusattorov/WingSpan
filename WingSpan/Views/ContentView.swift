@@ -14,7 +14,7 @@ struct ContentView: View {
                 PostsView()
             }
             Tab("Profile", systemImage: "person.fill") {
-//                ProfileView()
+                ProfileView()
             }
         }
         .foregroundStyle(

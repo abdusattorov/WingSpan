@@ -1,5 +1,5 @@
 //
-//  profile.swift
+//  ProfileView.swift
 //  WingSpan
 //
 //  Created by samin mirali on 14/11/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct profile: View {
+struct ProfileView: View {
     @State private var selectedSegment = "Offers"
     let segments = ["Offers", "Request" , "Replies"]
     
@@ -94,5 +94,5 @@ struct profile: View {
 }
 
 #Preview {
-    profile()
+    ProfileView()
 }
