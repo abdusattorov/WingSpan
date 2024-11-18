@@ -16,6 +16,7 @@
 		0774778B2CE74BD700C29A89 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774778A2CE74BD700C29A89 /* Post.swift */; };
 		0774778F2CE74CFC00C29A89 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774778E2CE74CFC00C29A89 /* Extensions.swift */; };
 		25197FA92CEB3B970015D130 /* AgreementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25197FA82CEB3B970015D130 /* AgreementView.swift */; };
+		25197FB82CEB3CE20015D130 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25197FB72CEB3CE20015D130 /* ProfileView.swift */; };
 		B8F9F4BA2CE7661400A6D2C3 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8F9F4B92CE7661400A6D2C3 /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		0774778A2CE74BD700C29A89 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		0774778E2CE74CFC00C29A89 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		25197FA82CEB3B970015D130 /* AgreementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementView.swift; sourceTree = "<group>"; };
+		25197FB72CEB3CE20015D130 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		B8F9F4B92CE7661400A6D2C3 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 				077477862CE74B8E00C29A89 /* PostsView.swift */,
 				B8F9F4B92CE7661400A6D2C3 /* WelcomeView.swift */,
 				25197FA82CEB3B970015D130 /* AgreementView.swift */,
+				25197FB72CEB3CE20015D130 /* ProfileView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				077477822CE74B4000C29A89 /* ContentView.swift in Sources */,
+				25197FB82CEB3CE20015D130 /* ProfileView.swift in Sources */,
 				25197FA92CEB3B970015D130 /* AgreementView.swift in Sources */,
 				0774778F2CE74CFC00C29A89 /* Extensions.swift in Sources */,
 				077477892CE74BA900C29A89 /* PostBubble.swift in Sources */,
