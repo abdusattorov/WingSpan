@@ -68,11 +68,9 @@ struct PostBubble: View {
                              Color.white : Color.black
             )
             .cornerRadius(15)
-            .frame(width: 360)
             .shadow(color: Color(hex: 0xb3b3b3), radius: 4, x: 0, y:4)
             
         }
-        .frame(maxWidth: .infinity)
         .padding(.bottom, 10)
     }
 }

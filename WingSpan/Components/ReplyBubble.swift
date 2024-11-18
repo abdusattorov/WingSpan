@@ -58,7 +58,7 @@ struct ReplyBubble: View {
             }
             .background(Color(#colorLiteral(red: 0.9333332181, green: 0.9333333969, blue: 0.9376390576, alpha: 1)))
             .cornerRadius(15)
-            .frame(width: 360)
+            .frame(maxWidth: .infinity)
             .shadow(color: Color(hex: 0xb3b3b3), radius: 4, x: 0, y:4)
             
         }

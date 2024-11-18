@@ -35,6 +35,7 @@ struct PostsView: View {
                     }
                 }
             }
+            .padding([.leading, .trailing], 16)
         }
     }
 }
