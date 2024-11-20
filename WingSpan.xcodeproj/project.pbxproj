@@ -117,9 +117,9 @@
 		0774777D2CE74B4000C29A89 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B8F9F4B92CE7661400A6D2C3 /* WelcomeView.swift */,
 				0774777F2CE74B4000C29A89 /* ContentView.swift */,
 				077477862CE74B8E00C29A89 /* PostsView.swift */,
-				B8F9F4B92CE7661400A6D2C3 /* WelcomeView.swift */,
 				25197FA82CEB3B970015D130 /* AgreementView.swift */,
 				25197FB72CEB3CE20015D130 /* ProfileView.swift */,
 				0796348A2CEB4DC000E727E1 /* MyOffersView.swift */,
