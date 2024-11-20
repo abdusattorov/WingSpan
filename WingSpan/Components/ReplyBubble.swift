@@ -71,5 +71,5 @@ struct ReplyBubble: View {
 }
 
 #Preview {
-    ReplyBubble(comment: Comment(id: "123", text: "This is a comment", author: "Teja Dungala", timestamp: "1 hour ago"), showAuthor: true)
+    ReplyBubble(comment: Comment(text: "This is a comment", author: "Teja Dungala", timestamp: "1 hour ago"), showAuthor: true)
 }

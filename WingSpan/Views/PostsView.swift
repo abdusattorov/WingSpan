@@ -8,31 +8,41 @@
 import SwiftUI
 
 struct PostsView: View {
+    
+    var postVM = PostViewModel()
     @State private var searchText = ""
+    @State var isPresented: Bool = false
+    @State private var selectedPost: Post?
     
     var body: some View {
         NavigationStack {
-            VStack {
-                
-                ScrollView {
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Zahra", received: false, timestamp: "1 hour ago"), showAuthor: true)
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Samin", received: false, timestamp: "1 hour ago"), showAuthor: true)
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Chiara", received: false, timestamp: "1 hour ago"), showAuthor: true)
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Marwa", received: false, timestamp: "1 hour ago"), showAuthor: true)
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Teja", received: false, timestamp: "1 hour ago"), showAuthor: true)
-                    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
-                }
-            }
-            .navigationTitle("Wings")
-            .searchable(text: $searchText)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        //                        showModal.toggle()
-                    } label: {
-                        Text("Add Post")
-                        Image(systemName: "plus.app.fill")
+            ZStack{
+                VStack {
+                    
+                    ScrollView {
+                        ForEach(postVM.posts) {post in
+                            PostBubble(post: post, showAuthor: true, action: {
+                                selectedPost = post
+                                isPresented.toggle()
+                            })
+                        }
                     }
+                }
+                .navigationTitle("Wings")
+                .searchable(text: $searchText)
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button {
+                            //                        showModal.toggle()
+                        } label: {
+                            Text("Add Post")
+                            Image(systemName: "plus.app.fill")
+                        }
+                    }
+                }
+                if let post = selectedPost, isPresented {
+                    CommentsPanel(post: post, isPresented: $isPresented)
+                        .transition(.move(edge: .bottom))
                 }
             }
 //            .padding([.leading, .trailing], 16)
@@ -40,6 +50,6 @@ struct PostsView: View {
     }
 }
 
-#Preview {
-    PostsView()
-}
+//#Preview {
+//    PostsView()
+//}

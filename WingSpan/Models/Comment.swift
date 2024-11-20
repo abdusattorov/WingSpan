@@ -8,7 +8,7 @@
 import Foundation
 
 struct Comment: Identifiable, Codable {
-    var id: String
+    var id: UUID = UUID()
     var text: String
     var author: String
     var timestamp: String

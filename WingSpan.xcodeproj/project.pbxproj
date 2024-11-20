@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0752D5A92CEC8BB000FF06D3 /* CommentsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752D5A82CEC8BB000FF06D3 /* CommentsPanel.swift */; };
+		0752D5AB2CEC99DB00FF06D3 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752D5AA2CEC99DB00FF06D3 /* PostViewModel.swift */; };
+		0752D5AF2CECB3ED00FF06D3 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752D5AE2CECB3ED00FF06D3 /* CommentViewModel.swift */; };
 		077477822CE74B4000C29A89 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0774777F2CE74B4000C29A89 /* ContentView.swift */; };
 		077477832CE74B4000C29A89 /* WingSpanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077477802CE74B4000C29A89 /* WingSpanApp.swift */; };
 		077477842CE74B4000C29A89 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0774777A2CE74B4000C29A89 /* Preview Assets.xcassets */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0752D5A82CEC8BB000FF06D3 /* CommentsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsPanel.swift; sourceTree = "<group>"; };
+		0752D5AA2CEC99DB00FF06D3 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		0752D5AE2CECB3ED00FF06D3 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
 		0770FCF12CD8E5F6002EEA3A /* WingSpan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WingSpan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0774777A2CE74B4000C29A89 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0774777E2CE74B4000C29A89 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +81,7 @@
 		077477782CE74B4000C29A89 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0752D5A82CEC8BB000FF06D3 /* CommentsPanel.swift */,
 				077477882CE74BA900C29A89 /* PostBubble.swift */,
 				079634902CEB4EF200E727E1 /* ReplyBubble.swift */,
 			);
@@ -101,6 +108,8 @@
 		0774777C2CE74B4000C29A89 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0752D5AA2CEC99DB00FF06D3 /* PostViewModel.swift */,
+				0752D5AE2CECB3ED00FF06D3 /* CommentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -208,11 +217,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0752D5AF2CECB3ED00FF06D3 /* CommentViewModel.swift in Sources */,
 				077477822CE74B4000C29A89 /* ContentView.swift in Sources */,
 				25197FB82CEB3CE20015D130 /* ProfileView.swift in Sources */,
 				25197FA92CEB3B970015D130 /* AgreementView.swift in Sources */,
 				079634932CEB5BF200E727E1 /* Comment.swift in Sources */,
 				0774778F2CE74CFC00C29A89 /* Extensions.swift in Sources */,
+				0752D5AB2CEC99DB00FF06D3 /* PostViewModel.swift in Sources */,
 				077477892CE74BA900C29A89 /* PostBubble.swift in Sources */,
 				077477832CE74B4000C29A89 /* WingSpanApp.swift in Sources */,
 				077477872CE74B8E00C29A89 /* PostsView.swift in Sources */,
@@ -221,6 +232,7 @@
 				079634912CEB4EF200E727E1 /* ReplyBubble.swift in Sources */,
 				0796348D2CEB4DC900E727E1 /* MyRequestsView.swift in Sources */,
 				B8F9F4BA2CE7661400A6D2C3 /* WelcomeView.swift in Sources */,
+				0752D5A92CEC8BB000FF06D3 /* CommentsPanel.swift in Sources */,
 				0796348B2CEB4DC000E727E1 /* MyOffersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

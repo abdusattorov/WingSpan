@@ -8,7 +8,7 @@
 import Foundation
 
 struct Post: Identifiable, Codable {
-    var id: String
+    var id: UUID = UUID()
     var text: String
     var type: String
     var author: String

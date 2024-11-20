@@ -9,8 +9,12 @@ import SwiftUI
 
 struct PostBubble: View {
     
+    var postVM = PostViewModel()
     var post: Post
     var showAuthor: Bool
+    var action : () -> Void
+    
+    @State var isPresented: Bool = false
     
     var body: some View {
         VStack {
@@ -49,10 +53,15 @@ struct PostBubble: View {
                         .italic()
                         .font(.caption)
                     Spacer()
-                    Text(.init(systemName: "bubble.fill"))
-                        .font(.system(size: 15))
-                        .foregroundStyle(post.type == "Offer" ?
-                                         Color.greenLight : Color.greenDark)
+                    Button {
+                        action()
+                    } label: {
+                        Text(.init(systemName: "bubble.fill"))
+                            .font(.system(size: 15))
+                            .foregroundStyle(post.type == "Offer" ?
+                                             Color.greenLight : Color.greenDark)
+                    }
+            
                     Text("7")
                         .font(.caption)
                         .italic()
@@ -73,10 +82,18 @@ struct PostBubble: View {
         }
         .padding(.bottom, 10)
         .padding([.leading, .trailing], 16)
+//        .sheet(isPresented: $isPresented, content: {
+//            CommentsPanel(post: post, isPresented: $isPresented)
+//        })
+//        .overlay(
+//            Group {
+               
+//            }
+//        )
     }
 }
 
-#Preview {
-    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
-    PostBubble(post: Post(id: "123", text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
-}
+//#Preview {
+//    PostBubble(post: Post(text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
+//    PostBubble(post: Post(text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
+//}
