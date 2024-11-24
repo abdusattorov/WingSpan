@@ -82,18 +82,11 @@ struct PostBubble: View {
         }
         .padding(.bottom, 10)
         .padding([.leading, .trailing], 16)
-//        .sheet(isPresented: $isPresented, content: {
-//            CommentsPanel(post: post, isPresented: $isPresented)
-//        })
-//        .overlay(
-//            Group {
-               
-//            }
-//        )
+        
     }
 }
 
-//#Preview {
-//    PostBubble(post: Post(text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
-//    PostBubble(post: Post(text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true)
-//}
+#Preview {
+    PostBubble(post: Post(text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Offer", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true,  action: { print("Action triggered!") })
+    PostBubble(post: Post(text: "Hello, I need help with my project, can anyone teach me how to use Firebase to create a chat app backend? Thank you!", type: "Request", author: "Abdusamad", received: false, timestamp: "1 hour ago"), showAuthor: true,  action: { print("Action triggered!") })
+}
