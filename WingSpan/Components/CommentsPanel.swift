@@ -146,8 +146,8 @@ struct CommentsPanel: View {
         .background(Color.white)
         .cornerRadius(20)
         .shadow(radius: 10)
-//        .frame(maxHeight: .infinity)
-//        .transition(.move(edge: .bottom)) // Animazione di entrata dal basso
+        .frame(maxHeight: .infinity)
+        .transition(.move(edge: .bottom)) // Animazione di entrata dal basso
     }
 }
 
