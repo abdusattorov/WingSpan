@@ -9,10 +9,14 @@ import SwiftUI
 
 struct AddPostView: View {
     
+    let postViewModel: PostViewModel
+    
+    //    @State var isPressed: Bool = true
     @State var post: String = ""
-//    @State var isPressed: Bool = true
-    @State var isOffer: Bool = true
+//    @State var isOffer: Bool = true
     @Binding var showModal: Bool
+    
+    @State var selectedType = "Offer"
     
     var body: some View {
         NavigationStack {
@@ -62,14 +66,14 @@ struct AddPostView: View {
                         .padding()
                     
                     if post.isEmpty {
-                        Text(isOffer ? "I can help you with..." : "I need help with...")
+                        Text(selectedType == "Offer" ? "I can help you with..." : "I need help with...")
                             .foregroundColor(.gray)
                             .padding(.top, 24)
                             .padding(.leading, 20)
                     }
                 }
             }
-            .navigationTitle(isOffer ? "Offer" : "Request")
+            .navigationTitle(selectedType == "Offer" ? "Offer" : "Request")
             .navigationBarTitleDisplayMode(.inline)
             
             .toolbar{
@@ -83,6 +87,8 @@ struct AddPostView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        let newPost = Post(text: post, type: selectedType, author: "Abdusamad", received: true, timestamp: "1 hour ago")
+                        postViewModel.add(post: newPost)
                         showModal.toggle()
                     } label: {
                         Text("Add")
@@ -90,13 +96,14 @@ struct AddPostView: View {
                     .disabled(self.post.isEmpty)
                 }
             }
+            
             .toolbarTitleMenu {
                 Button {
-                    isOffer = true
+                    selectedType = "Offer"
                 } label: {
                     Text("Offer")
                     
-                    if isOffer {
+                    if selectedType == "Offer" {
                         Spacer()
                         Image(systemName: "checkmark")
                     }
@@ -104,21 +111,21 @@ struct AddPostView: View {
                 }
                 
                 Button {
-                    isOffer = false
+                    selectedType = "Request"
                 } label: {
                     Text("Request")
                     
-                    if !isOffer {
+                    if selectedType == "Request" {
                         Spacer()
                         Image(systemName: "checkmark")
                     }
                 }
-
             }
+            
         }
     }
 }
 
 #Preview {
-    AddPostView(showModal: .constant(true))
+    AddPostView(postViewModel: PostViewModel(), showModal: .constant(true))
 }

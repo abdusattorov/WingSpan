@@ -32,7 +32,7 @@ struct PostsView: View {
                 .navigationTitle("Wings")
                 .searchable(text: $searchText)
                 .sheet(isPresented: $showModal, content: {
-                    AddPostView(showModal: $showModal)
+                    AddPostView(postViewModel: postVM, showModal: $showModal)
                 })
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {

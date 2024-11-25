@@ -25,4 +25,8 @@ class PostViewModel {
              type: "Request", author: "Samin", received: true, timestamp: "1 hour ago")
     ]
     
+    func add(post: Post) {
+        self.posts.insert(post, at: 0)
+    }
+    
 }
