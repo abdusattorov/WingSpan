@@ -17,9 +17,6 @@ struct ContentView: View {
                 ProfileView()
             }
         }
-        .foregroundStyle(
-            Color.greenDark
-        )
     }
 }
 

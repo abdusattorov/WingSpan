@@ -95,12 +95,23 @@ struct AddPostView: View {
                     isOffer = true
                 } label: {
                     Text("Offer")
+                    
+                    if isOffer {
+                        Spacer()
+                        Image(systemName: "checkmark")
+                    }
+                    
                 }
                 
                 Button {
                     isOffer = false
                 } label: {
                     Text("Request")
+                    
+                    if !isOffer {
+                        Spacer()
+                        Image(systemName: "checkmark")
+                    }
                 }
 
             }
