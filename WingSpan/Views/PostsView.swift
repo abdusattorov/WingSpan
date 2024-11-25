@@ -13,6 +13,7 @@ struct PostsView: View {
     @State private var searchText = ""
     @State var isPresented: Bool = false
     @State private var selectedPost: Post?
+    @State var showModal: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -30,10 +31,13 @@ struct PostsView: View {
                 }
                 .navigationTitle("Wings")
                 .searchable(text: $searchText)
+                .sheet(isPresented: $showModal, content: {
+                    AddPostView(showModal: $showModal)
+                })
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
                         Button {
-                            //                        showModal.toggle()
+                            showModal.toggle()
                         } label: {
                             Text("Add Post")
                             Image(systemName: "plus.app.fill")
@@ -45,7 +49,7 @@ struct PostsView: View {
                         .transition(.move(edge: .bottom))
                 }
             }
-//            .padding([.leading, .trailing], 16)
+            //            .padding([.leading, .trailing], 16)
         }
     }
 }

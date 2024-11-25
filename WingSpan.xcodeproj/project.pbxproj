@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		071A34562CF3B72700689CD1 /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A34552CF3B72700689CD1 /* AddPostView.swift */; };
 		0752D5A92CEC8BB000FF06D3 /* CommentsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752D5A82CEC8BB000FF06D3 /* CommentsPanel.swift */; };
 		0752D5AB2CEC99DB00FF06D3 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752D5AA2CEC99DB00FF06D3 /* PostViewModel.swift */; };
 		0752D5AF2CECB3ED00FF06D3 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752D5AE2CECB3ED00FF06D3 /* CommentViewModel.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		071A34552CF3B72700689CD1 /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
 		0752D5A82CEC8BB000FF06D3 /* CommentsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsPanel.swift; sourceTree = "<group>"; };
 		0752D5AA2CEC99DB00FF06D3 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		0752D5AE2CECB3ED00FF06D3 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				0796348A2CEB4DC000E727E1 /* MyOffersView.swift */,
 				0796348C2CEB4DC900E727E1 /* MyRequestsView.swift */,
 				0796348E2CEB4DD400E727E1 /* MyRepliesView.swift */,
+				071A34552CF3B72700689CD1 /* AddPostView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				077477892CE74BA900C29A89 /* PostBubble.swift in Sources */,
 				077477832CE74B4000C29A89 /* WingSpanApp.swift in Sources */,
 				077477872CE74B8E00C29A89 /* PostsView.swift in Sources */,
+				071A34562CF3B72700689CD1 /* AddPostView.swift in Sources */,
 				0796348F2CEB4DD400E727E1 /* MyRepliesView.swift in Sources */,
 				0774778B2CE74BD700C29A89 /* Post.swift in Sources */,
 				079634912CEB4EF200E727E1 /* ReplyBubble.swift in Sources */,
