@@ -13,6 +13,8 @@ struct ProfileView: View {
     
     @State var selection = 0
     
+    @State var showModal: Bool = false
+    
     var body: some View {
         NavigationStack {
             VStack{
@@ -58,7 +60,7 @@ struct ProfileView: View {
                         .bold()
                     Spacer()
                     Button {
-                        //                        showModal.toggle()
+                        showModal.toggle()
                     } label: {
                         Image(systemName: "pencil")
                             .imageScale(.large)
@@ -115,7 +117,10 @@ struct ProfileView: View {
                 
             }
             .navigationTitle("My Posts")
-//            .padding([.leading, .trailing], 16)
+            .sheet(isPresented: $showModal) {
+                ProfileEditModalView(showModal: $showModal)
+            }
+            //            .padding([.leading, .trailing], 16)
         }
     }
 }

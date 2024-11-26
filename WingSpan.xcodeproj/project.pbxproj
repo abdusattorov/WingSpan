@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		071A34562CF3B72700689CD1 /* AddPostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071A34552CF3B72700689CD1 /* AddPostView.swift */; };
+		073B6C732CF4CCDA000502B0 /* ProfileEditModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073B6C722CF4CCDA000502B0 /* ProfileEditModalView.swift */; };
+		073B6C752CF5B9A8000502B0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073B6C742CF5B9A8000502B0 /* User.swift */; };
+		073B6C792CF6852C000502B0 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073B6C782CF6852C000502B0 /* UserViewModel.swift */; };
 		0752D5A92CEC8BB000FF06D3 /* CommentsPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752D5A82CEC8BB000FF06D3 /* CommentsPanel.swift */; };
 		0752D5AB2CEC99DB00FF06D3 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752D5AA2CEC99DB00FF06D3 /* PostViewModel.swift */; };
 		0752D5AF2CECB3ED00FF06D3 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0752D5AE2CECB3ED00FF06D3 /* CommentViewModel.swift */; };
@@ -31,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		071A34552CF3B72700689CD1 /* AddPostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostView.swift; sourceTree = "<group>"; };
+		073B6C722CF4CCDA000502B0 /* ProfileEditModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditModalView.swift; sourceTree = "<group>"; };
+		073B6C742CF5B9A8000502B0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		073B6C782CF6852C000502B0 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		0752D5A82CEC8BB000FF06D3 /* CommentsPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsPanel.swift; sourceTree = "<group>"; };
 		0752D5AA2CEC99DB00FF06D3 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		0752D5AE2CECB3ED00FF06D3 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 			children = (
 				0774778A2CE74BD700C29A89 /* Post.swift */,
 				079634922CEB5BF200E727E1 /* Comment.swift */,
+				073B6C742CF5B9A8000502B0 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -112,6 +119,7 @@
 			children = (
 				0752D5AA2CEC99DB00FF06D3 /* PostViewModel.swift */,
 				0752D5AE2CECB3ED00FF06D3 /* CommentViewModel.swift */,
+				073B6C782CF6852C000502B0 /* UserViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -124,6 +132,7 @@
 				077477862CE74B8E00C29A89 /* PostsView.swift */,
 				25197FA82CEB3B970015D130 /* AgreementView.swift */,
 				25197FB72CEB3CE20015D130 /* ProfileView.swift */,
+				073B6C722CF4CCDA000502B0 /* ProfileEditModalView.swift */,
 				0796348A2CEB4DC000E727E1 /* MyOffersView.swift */,
 				0796348C2CEB4DC900E727E1 /* MyRequestsView.swift */,
 				0796348E2CEB4DD400E727E1 /* MyRepliesView.swift */,
@@ -223,10 +232,12 @@
 				0752D5AF2CECB3ED00FF06D3 /* CommentViewModel.swift in Sources */,
 				077477822CE74B4000C29A89 /* ContentView.swift in Sources */,
 				25197FB82CEB3CE20015D130 /* ProfileView.swift in Sources */,
+				073B6C732CF4CCDA000502B0 /* ProfileEditModalView.swift in Sources */,
 				25197FA92CEB3B970015D130 /* AgreementView.swift in Sources */,
 				079634932CEB5BF200E727E1 /* Comment.swift in Sources */,
 				0774778F2CE74CFC00C29A89 /* Extensions.swift in Sources */,
 				0752D5AB2CEC99DB00FF06D3 /* PostViewModel.swift in Sources */,
+				073B6C752CF5B9A8000502B0 /* User.swift in Sources */,
 				077477892CE74BA900C29A89 /* PostBubble.swift in Sources */,
 				077477832CE74B4000C29A89 /* WingSpanApp.swift in Sources */,
 				077477872CE74B8E00C29A89 /* PostsView.swift in Sources */,
@@ -237,6 +248,7 @@
 				0796348D2CEB4DC900E727E1 /* MyRequestsView.swift in Sources */,
 				B8F9F4BA2CE7661400A6D2C3 /* WelcomeView.swift in Sources */,
 				0752D5A92CEC8BB000FF06D3 /* CommentsPanel.swift in Sources */,
+				073B6C792CF6852C000502B0 /* UserViewModel.swift in Sources */,
 				0796348B2CEB4DC000E727E1 /* MyOffersView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
