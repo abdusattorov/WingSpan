@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ProfileEditModalView: View {
     
+    var userViewModel: UserViewModel
     @State var name: String = ""
     @State var surname: String = ""
     @Binding var showModal: Bool
@@ -19,6 +20,10 @@ struct ProfileEditModalView: View {
                 Form {
                     Section("Full name") {
                         TextField("Name:", text: $name)
+                            .onAppear {
+                                self.name = userViewModel.user.name
+                                self.surname = userViewModel.user.surname
+                            }
                         TextField("Surname:", text: $surname)
                     }
                 }
@@ -37,11 +42,12 @@ struct ProfileEditModalView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        userViewModel.update(name: name, surname: surname)
                         showModal.toggle()
                     } label: {
                         Text("Save")
                     }
-                    .disabled(name.isEmpty || surname.isEmpty)
+                    .disabled(name == userViewModel.user.name && surname == userViewModel.user.surname)
                 }
             }
             
@@ -50,5 +56,5 @@ struct ProfileEditModalView: View {
 }
 
 #Preview {
-    ProfileEditModalView(showModal: .constant(true))
+    ProfileEditModalView(userViewModel: UserViewModel(), showModal: .constant(true))
 }

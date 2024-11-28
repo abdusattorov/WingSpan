@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AddPostView: View {
     
+    let userViewModel: UserViewModel
     let postViewModel: PostViewModel
     
     //    @State var isPressed: Bool = true
@@ -87,7 +88,7 @@ struct AddPostView: View {
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
-                        let newPost = Post(text: post, type: selectedType, author: "Abdusamad", received: true, timestamp: "1 hour ago")
+                        let newPost = Post(text: post, type: selectedType, author: "\(userViewModel.user.name) \(userViewModel.user.surname)", received: true, timestamp: "1 hour ago")
                         postViewModel.add(post: newPost)
                         showModal.toggle()
                     } label: {
@@ -127,5 +128,5 @@ struct AddPostView: View {
 }
 
 #Preview {
-    AddPostView(postViewModel: PostViewModel(), showModal: .constant(true))
+    AddPostView(userViewModel: UserViewModel(), postViewModel: PostViewModel(), showModal: .constant(true))
 }

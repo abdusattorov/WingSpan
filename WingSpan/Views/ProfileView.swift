@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct ProfileView: View {
+    
+    var userVM = UserViewModel()
+    
     @State private var selectedSegment = "Offers"
     let segments = ["Offers", "Request", "Replies"]
     
@@ -56,7 +59,7 @@ struct ProfileView: View {
                         .foregroundStyle(Color.greenDark)
                     //                        .background(Color.greenLight)
                         .cornerRadius(50)
-                    Text("Teja Dungala")
+                    Text("\(userVM.user.name) \(userVM.user.surname)")
                         .bold()
                     Spacer()
                     Button {
@@ -118,7 +121,7 @@ struct ProfileView: View {
             }
             .navigationTitle("My Posts")
             .sheet(isPresented: $showModal) {
-                ProfileEditModalView(showModal: $showModal)
+                ProfileEditModalView(userViewModel: userVM, showModal: $showModal)
             }
             //            .padding([.leading, .trailing], 16)
         }
