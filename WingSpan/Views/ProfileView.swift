@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    var userVM = UserViewModel()
+    var userVM: UserViewModel
     
     @State private var selectedSegment = "Offers"
     let segments = ["Offers", "Request", "Replies"]
@@ -129,5 +129,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    ProfileView(userVM: UserViewModel())
 }

@@ -10,6 +10,8 @@ import SwiftUI
 struct PostsView: View {
     
     var postVM = PostViewModel()
+    var userVM: UserViewModel
+    
     @State private var searchText = ""
     @State var isPresented: Bool = false
     @State private var selectedPost: Post?
@@ -32,7 +34,7 @@ struct PostsView: View {
                 .navigationTitle("Wings")
                 .searchable(text: $searchText)
                 .sheet(isPresented: $showModal, content: {
-                    AddPostView(userViewModel: UserViewModel(), postViewModel: postVM, showModal: $showModal)
+                    AddPostView(userViewModel: userVM, postViewModel: postVM, showModal: $showModal)
                 })
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
@@ -55,5 +57,5 @@ struct PostsView: View {
 }
 
 #Preview {
-    PostsView()
+    PostsView(userVM: UserViewModel())
 }
